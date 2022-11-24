@@ -36,7 +36,7 @@
 
 -->
 
-<div  align="center">
+<p align="center">
 
 [![Contributors][contributors-shield]][contributors-url]
 
@@ -50,7 +50,7 @@
 
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-</div>
+</p>
   
 
 <!-- PROJECT LOGO -->
