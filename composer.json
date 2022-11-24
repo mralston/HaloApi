@@ -8,6 +8,12 @@
             "Derricksmith\\Haloapi\\": "src/"
         }
     },
+    "support": {
+        "issues": "https://github.com/orchidsoftware/platform/issues",
+        "source": "https://github.com/orchidsoftware/platform",
+        "docs": "https://orchid.software/en/docs",
+        "email": "bliz48rus@gmail.com"
+    },
     "authors": [
         {
             "name": "Derrick Smith"
