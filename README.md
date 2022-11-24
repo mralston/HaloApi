@@ -36,6 +36,8 @@
 
 -->
 
+<div  align="center">
+
 [![Contributors][contributors-shield]][contributors-url]
 
 [![Forks][forks-shield]][forks-url]
@@ -48,8 +50,7 @@
 
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-  
-  
+</div>
   
 
 <!-- PROJECT LOGO -->
