@@ -49,11 +49,13 @@
         <img src="https://img.shields.io/github/license/derricksmith/HaloApi.svg?style=for-the-badge" /></a>
     <a href="https://www.linkedin.com/in/derrick-smith-cissp-cism-9b355b56/">
         <img src="https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555" /></a>
+</p>
+
+<p align="center">
     <a href="https://twitter.com/intent/follow?screen_name=derrick_a_smith">
         <img src="https://img.shields.io/twitter/follow/derrick_a_smith?style=social&logo=twitter"
             alt="follow on Twitter"></a>
 </p>
-  
 
 <!-- PROJECT LOGO -->
 
