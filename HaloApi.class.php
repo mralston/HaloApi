@@ -1,6 +1,6 @@
 <?php
 
-namespace DerrickSmith\Halo;
+namespace DerrickSmith\HaloApi;
 
 class HaloApi {
 	private $grant_type;
