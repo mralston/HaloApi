@@ -215,21 +215,14 @@ Project Link: [https://github.com/derricksmith/HaloApi](https://github.com/derri
 
 <!-- ACKNOWLEDGMENTS -->
 
-<!-- ## Acknowledgments
+## Acknowledgments
 
-  
-
-* []()
-
-* []()
-
-* []()
-
+* [Jordi Moraleda - PHP Rest Curl](https://github.com/jmoraleda/php-rest-curl)
   
 
 <p  align="right">(<a  href="#readme-top">back to top</a>)</p> 
 
--->
+
 
   
   
