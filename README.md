@@ -62,6 +62,14 @@ The PHP curl extension is required.
 
 ## Usage
 
+Install with Composer
+
+```
+composer require derricksmith/haloapi:dev-main
+```
+
+------ OR ------
+
 Include the class in your project.  
 
 ```
