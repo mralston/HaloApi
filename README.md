@@ -39,33 +39,17 @@
 <p align="center">
     <a href="https://github.com/derricksmith/HaloApi/contributors" alt="Contributors">
         <img src="https://img.shields.io/github/contributors/derricksmith/HaloApi.svg?style=for-the-badge" /></a>
-    
     <a href="https://github.com/derricksmith/HaloApi/network/members" alt="Forks">
         <img src="https://img.shields.io/github/forks/derricksmith/HaloApi.svg?style=for-the-badge" /></a>
-    
-    <a href="#sponsors" alt="Sponsors on Open Collective">
-        <img src="https://img.shields.io/opencollective/sponsors/shields" /></a>
-    
-    <a href="https://github.com/badges/shields/pulse" alt="Activity">
-        <img src="https://img.shields.io/github/commit-activity/m/badges/shields" /></a>
-    
-    <a href="https://circleci.com/gh/badges/shields/tree/master">
-        <img src="https://img.shields.io/circleci/project/github/badges/shields/master" alt="build status"></a>
-    
-    <a href="https://circleci.com/gh/badges/daily-tests">
-        <img src="https://img.shields.io/circleci/project/github/badges/daily-tests?label=service%20tests"
-            alt="service-test status"></a>
-	
-    <a href="https://coveralls.io/github/badges/shields">
-        <img src="https://img.shields.io/coveralls/github/badges/shields"
-            alt="coverage"></a>
-    <a href="https://lgtm.com/projects/g/badges/shields/alerts/">
-        <img src="https://img.shields.io/lgtm/alerts/g/badges/shields"
-            alt="Total alerts"/></a>
-    <a href="https://discord.gg/HjJCwm5">
-        <img src="https://img.shields.io/discord/308323056592486420?logo=discord"
-            alt="chat on Discord"></a>
-    <a href="https://twitter.com/intent/follow?screen_name=shields_io">
+    <a href="https://github.com/derricksmith/HaloApi/stargazers" alt="Stars">
+        <img src="https://img.shields.io/github/stars/derricksmith/HaloApi.svg?style=for-the-badge" /></a>
+    <a href="https://github.com/derricksmith/HaloApi/issues" alt="Issues">
+        <img src="https://img.shields.io/github/issues/derricksmith/HaloApi.svg?style=for-the-badge" /></a>
+    <a href="https://github.com/derricksmith/HaloApi/blob/master/LICENSE.txt" alt="License">
+        <img src="https://img.shields.io/github/license/derricksmith/HaloApi.svg?style=for-the-badge" /></a>
+    <a href="https://www.linkedin.com/in/derrick-smith-cissp-cism-9b355b56/">
+        <img src="https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555" /></a>
+    <a href="https://twitter.com/intent/follow?screen_name=derrick_a_smith">
         <img src="https://img.shields.io/twitter/follow/shields_io?style=social&logo=twitter"
             alt="follow on Twitter"></a>
 </p>
