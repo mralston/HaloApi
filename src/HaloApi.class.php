@@ -1,6 +1,6 @@
 <?php
 
-namespace derricksmith\haloapi;
+namespace DerrickSmith\HaloApi;
 
 /** 
 * HaloApi
@@ -207,7 +207,7 @@ class HaloApi {
 	
 	public function postActions($array = array()) {
 		$endpoint = $this->host . '/api/actions';
-		return $this->post($endpoint, $array);
+		return $this->exec('POST',$endpoint, $array);
 	}
 	
 	public function deleteActions($array = array()) {
@@ -225,7 +225,7 @@ class HaloApi {
 	//////////////////////////////////////////////////////////////////////////////////////
 	
 	public function getAgents($array = array()) {
-		$endpoint = $this->host . '/Agent';
+		$endpoint = $this->host . '/api/Agent';
         return $this->exec('GET',$endpoint, $array);
 	}
 	
@@ -234,18 +234,18 @@ class HaloApi {
 			throw new Exception("Missing 'id' parameter.");
 			return false;
 		}
-		$endpoint = $this->host . '/Agent/'.$array['id'];
+		$endpoint = $this->host . '/api/Agent/'.$array['id'];
         unset($array['id']);
 		return $this->exec('GET',$endpoint, $array);
 	}
 	
 	public function getAgentSelf() {
-		$endpoint = $this->host . '/Agent/me';
+		$endpoint = $this->host . '/api/Agent/me';
         return $this->exec('GET',$endpoint, $array);
 	}
 	
 	public function postAgent($array = array()) {
-		$endpoint = $this->host . '/Agent';
+		$endpoint = $this->host . '/api/Agent';
 		return $this->exec('POST',$endpoint, $array);
 	}
 	
@@ -254,7 +254,7 @@ class HaloApi {
 			throw new Exception("Missing 'id' parameter.");
 			return false;
 		}
-		$endpoint = $this->host . '/Agent/'.$array['id'];
+		$endpoint = $this->host . '/api/Agent/'.$array['id'];
         unset($array['id']);
 		return $this->exec('DELETE',$endpoint, $array);
 	}
@@ -264,7 +264,7 @@ class HaloApi {
 	//////////////////////////////////////////////////////////////////////////////////////
 	
 	public function getAppointments($array = array()) {
-		$endpoint = $this->host . '/Appointment';
+		$endpoint = $this->host . '/api/Appointment';
         return $this->exec('GET',$endpoint, $array);
 	}
 	
@@ -273,13 +273,13 @@ class HaloApi {
 			throw new Exception("Missing 'id' parameter.");
 			return false;
 		}
-		$endpoint = $this->host . '/Appointment/'.$array['id'];
+		$endpoint = $this->host . '/api/Appointment/'.$array['id'];
         unset($array['id']);
 		return $this->exec('GET',$endpoint, $array);
 	}
 	
 	public function postAppointment($array = array()) {
-		$endpoint = $this->host . '/Appointment';
+		$endpoint = $this->host . '/api/Appointment';
 		return $this->exec('POST',$endpoint, $array);
 	}
 	
@@ -288,7 +288,7 @@ class HaloApi {
 			throw new Exception("Missing 'id' parameter.");
 			return false;
 		}
-		$endpoint = $this->host . '/Appointment/'.$array['id'];
+		$endpoint = $this->host . '/api/Appointment/'.$array['id'];
         unset($array['id']);
 		return $this->exec('DELETE',$endpoint, $array);
 	}
@@ -298,7 +298,7 @@ class HaloApi {
 	//////////////////////////////////////////////////////////////////////////////////////
 	
 	public function getAssets($array = array()) {
-		$endpoint = $this->host . '/Asset';
+		$endpoint = $this->host . '/api/Asset';
         return $this->exec('GET',$endpoint, $array);
 	}
 	
@@ -307,13 +307,13 @@ class HaloApi {
 			throw new Exception("Missing 'id' parameter.");
 			return false;
 		}
-		$endpoint = $this->host . '/Asset/'.$array['id'];
+		$endpoint = $this->host . '/api/Asset/'.$array['id'];
         unset($array['id']);
 		return $this->exec('GET',$endpoint, $array);
 	}
 	
 	public function postAsset($array = array()) {
-		$endpoint = $this->host . '/Asset';
+		$endpoint = $this->host . '/api/Asset';
 		return $this->exec('POST',$endpoint, $array);
 	}
 	
@@ -322,7 +322,7 @@ class HaloApi {
 			throw new Exception("Missing 'id' parameter.");
 			return false;
 		}
-		$endpoint = $this->host . '/Asset/'.$array['id'];
+		$endpoint = $this->host . '/api/Asset/'.$array['id'];
         unset($array['id']);
 		return $this->exec('DELETE',$endpoint, $array);
 	}
@@ -332,7 +332,7 @@ class HaloApi {
 	//////////////////////////////////////////////////////////////////////////////////////
 	
 	public function getAttachments($array = array()) {
-		$endpoint = $this->host . '/Attachment';
+		$endpoint = $this->host . '/api/Attachment';
         return $this->exec('GET',$endpoint, $array);
 	}
 	
@@ -341,13 +341,13 @@ class HaloApi {
 			throw new Exception("Missing 'id' parameter.");
 			return false;
 		}
-		$endpoint = $this->host . '/Attachment/'.$array['id'];
+		$endpoint = $this->host . '/api/Attachment/'.$array['id'];
         unset($array['id']);
 		return $this->exec('GET',$endpoint, $array);
 	}
 	
 	public function postAttachment($array = array()) {
-		$endpoint = $this->host . '/Attachment';
+		$endpoint = $this->host . '/api/Attachment';
 		return $this->exec('POST',$endpoint, $array);
 	}
 	
@@ -356,7 +356,7 @@ class HaloApi {
 			throw new Exception("Missing 'id' parameter.");
 			return false;
 		}
-		$endpoint = $this->host . '/Attachment/'.$array['id'];
+		$endpoint = $this->host . '/api/Attachment/'.$array['id'];
         unset($array['id']);
 		return $this->exec('DELETE',$endpoint, $array);
 	}
@@ -366,7 +366,7 @@ class HaloApi {
 	//////////////////////////////////////////////////////////////////////////////////////
 	
 	public function getClients($array = array()) {
-		$endpoint = $this->host . '/Client';
+		$endpoint = $this->host . '/api/Client';
         return $this->exec('GET',$endpoint, $array);
 	}
 	
@@ -375,13 +375,13 @@ class HaloApi {
 			throw new Exception("Missing 'id' parameter.");
 			return false;
 		}
-		$endpoint = $this->host . '/Client/'.$array['id'];
+		$endpoint = $this->host . '/api/Client/'.$array['id'];
         unset($array['id']);
 		return $this->exec('GET',$endpoint, $array);
 	}
 	
 	public function postClient($array = array()) {
-		$endpoint = $this->host . '/Client';
+		$endpoint = $this->host . '/api/Client';
 		return $this->exec('POST',$endpoint, $array);
 	}
 	
@@ -390,7 +390,7 @@ class HaloApi {
 			throw new Exception("Missing 'id' parameter.");
 			return false;
 		}
-		$endpoint = $this->host . '/Client/'.$array['id'];
+		$endpoint = $this->host . '/api/Client/'.$array['id'];
         unset($array['id']);
 		return $this->exec('DELETE',$endpoint, $array);
 	}
@@ -400,7 +400,7 @@ class HaloApi {
 	//////////////////////////////////////////////////////////////////////////////////////
 	
 	public function getContracts($array = array()) {
-		$endpoint = $this->host . '/Contract';
+		$endpoint = $this->host . '/api/Contract';
         return $this->exec('GET',$endpoint, $array);
 	}
 	
@@ -409,13 +409,13 @@ class HaloApi {
 			throw new Exception("Missing 'id' parameter.");
 			return false;
 		}
-		$endpoint = $this->host . '/Contract/'.$array['id'];
+		$endpoint = $this->host . '/api/Contract/'.$array['id'];
         unset($array['id']);
 		return $this->exec('GET',$endpoint, $array);
 	}
 	
 	public function postContract($array = array()) {
-		$endpoint = $this->host . '/Contract';
+		$endpoint = $this->host . '/api/Contract';
 		return $this->exec('POST',$endpoint, $array);
 	}
 	
@@ -424,7 +424,7 @@ class HaloApi {
 			throw new Exception("Missing 'id' parameter.");
 			return false;
 		}
-		$endpoint = $this->host . '/Contract/'.$array['id'];
+		$endpoint = $this->host . '/api/Contract/'.$array['id'];
         unset($array['id']);
 		return $this->exec('DELETE',$endpoint, $array);
 	}
@@ -434,7 +434,7 @@ class HaloApi {
 	//////////////////////////////////////////////////////////////////////////////////////
 	
 	public function getInvoices($array = array()) {
-		$endpoint = $this->host . '/Contract';
+		$endpoint = $this->host . '/api/Contract';
         return $this->exec('GET',$endpoint, $array);
 	}
 	
@@ -443,13 +443,13 @@ class HaloApi {
 			throw new Exception("Missing 'id' parameter.");
 			return false;
 		}
-		$endpoint = $this->host . '/Invoice/'.$array['id'];
+		$endpoint = $this->host . '/api/Invoice/'.$array['id'];
         unset($array['id']);
 		return $this->exec('GET',$endpoint, $array);
 	}
 	
 	public function postInvoice($array = array()) {
-		$endpoint = $this->host . '/Invoice';
+		$endpoint = $this->host . '/api/Invoice';
 		return $this->exec('POST',$endpoint, $array);
 	}
 	
@@ -458,7 +458,7 @@ class HaloApi {
 			throw new Exception("Missing 'id' parameter.");
 			return false;
 		}
-		$endpoint = $this->host . '/Invoice/'.$array['id'];
+		$endpoint = $this->host . '/api/Invoice/'.$array['id'];
         unset($array['id']);
 		return $this->exec('DELETE',$endpoint, $array);
 	}
@@ -468,7 +468,7 @@ class HaloApi {
 	//////////////////////////////////////////////////////////////////////////////////////
 	
 	public function getItems($array = array()) {
-		$endpoint = $this->host . '/Item';
+		$endpoint = $this->host . '/api/Item';
         return $this->exec('GET',$endpoint, $array);
 	}
 	
@@ -477,13 +477,13 @@ class HaloApi {
 			throw new Exception("Missing 'id' parameter.");
 			return false;
 		}
-		$endpoint = $this->host . '/Item/'.$array['id'];
+		$endpoint = $this->host . '/api/Item/'.$array['id'];
         unset($array['id']);
 		return $this->exec('GET',$endpoint, $array);
 	}
 	
 	public function postItem($array = array()) {
-		$endpoint = $this->host . '/Item';
+		$endpoint = $this->host . '/api/Item';
 		return $this->exec('POST',$endpoint, $array);
 	}
 	
@@ -492,7 +492,7 @@ class HaloApi {
 			throw new Exception("Missing 'id' parameter.");
 			return false;
 		}
-		$endpoint = $this->host . '/Item/'.$array['id'];
+		$endpoint = $this->host . '/api/Item/'.$array['id'];
         unset($array['id']);
 		return $this->exec('DELETE',$endpoint, $array);
 	}
@@ -502,7 +502,7 @@ class HaloApi {
 	//////////////////////////////////////////////////////////////////////////////////////
 	
 	public function getKbArticles($array = array()) {
-		$endpoint = $this->host . '/KBArticle';
+		$endpoint = $this->host . '/api/KBArticle';
         return $this->exec('GET',$endpoint, $array);
 	}
 	
@@ -511,13 +511,13 @@ class HaloApi {
 			throw new Exception("Missing 'id' parameter.");
 			return false;
 		}
-		$endpoint = $this->host . '/KBArticle/'.$array['id'];
+		$endpoint = $this->host . '/api/KBArticle/'.$array['id'];
         unset($array['id']);
 		return $this->exec('GET',$endpoint, $array);
 	}
 	
 	public function postKbArticle($array = array()) {
-		$endpoint = $this->host . '/KBArticle';
+		$endpoint = $this->host . '/api/KBArticle';
 		return $this->exec('POST',$endpoint, $array);
 	}
 	
@@ -526,7 +526,7 @@ class HaloApi {
 			throw new Exception("Missing 'id' parameter.");
 			return false;
 		}
-		$endpoint = $this->host . '/KBArticle/'.$array['id'];
+		$endpoint = $this->host . '/api/KBArticle/'.$array['id'];
         unset($array['id']);
 		return $this->exec('DELETE',$endpoint, $array);
 	}
@@ -536,7 +536,7 @@ class HaloApi {
 	//////////////////////////////////////////////////////////////////////////////////////
 	
 	public function getOpportunities($array = array()) {
-		$endpoint = $this->host . '/Opportunities';
+		$endpoint = $this->host . '/api/Opportunities';
         return $this->exec('GET',$endpoint, $array);
 	}
 	
@@ -545,13 +545,13 @@ class HaloApi {
 			throw new Exception("Missing 'id' parameter.");
 			return false;
 		}
-		$endpoint = $this->host . '/Opportunities/'.$array['id'];
+		$endpoint = $this->host . '/api/Opportunities/'.$array['id'];
         unset($array['id']);
 		return $this->exec('GET',$endpoint, $array);
 	}
 	
 	public function postOpportunity($array = array()) {
-		$endpoint = $this->host . '/Opportunities';
+		$endpoint = $this->host . '/api/Opportunities';
 		return $this->exec('POST',$endpoint, $array);
 	}
 	
@@ -560,7 +560,7 @@ class HaloApi {
 			throw new Exception("Missing 'id' parameter.");
 			return false;
 		}
-		$endpoint = $this->host . '/Opportunities/'.$array['id'];
+		$endpoint = $this->host . '/api/Opportunities/'.$array['id'];
         unset($array['id']);
 		return $this->exec('DELETE',$endpoint, $array);
 	}
@@ -570,7 +570,7 @@ class HaloApi {
 	//////////////////////////////////////////////////////////////////////////////////////
 	
 	public function getProjects($array = array()) {
-		$endpoint = $this->host . '/Projects';
+		$endpoint = $this->host . '/api/Projects';
         return $this->exec('GET',$endpoint, $array);
 	}
 	
@@ -579,13 +579,13 @@ class HaloApi {
 			throw new Exception("Missing 'id' parameter.");
 			return false;
 		}
-		$endpoint = $this->host . '/Projects/'.$array['id'];
+		$endpoint = $this->host . '/api/Projects/'.$array['id'];
         unset($array['id']);
 		return $this->exec('GET',$endpoint, $array);
 	}
 	
 	public function postProject($array = array()) {
-		$endpoint = $this->host . '/Projects';
+		$endpoint = $this->host . '/api/Projects';
 		return $this->exec('POST',$endpoint, $array);
 	}
 	
@@ -594,7 +594,7 @@ class HaloApi {
 			throw new Exception("Missing 'id' parameter.");
 			return false;
 		}
-		$endpoint = $this->host . '/Projects/'.$array['id'];
+		$endpoint = $this->host . '/api/Projects/'.$array['id'];
         unset($array['id']);
 		return $this->exec('DELETE',$endpoint, $array);
 	}
@@ -604,7 +604,7 @@ class HaloApi {
 	//////////////////////////////////////////////////////////////////////////////////////
 	
 	public function getQuotes($array = array()) {
-		$endpoint = $this->host . '/Quotation';
+		$endpoint = $this->host . '/api/Quotation';
         return $this->exec('GET',$endpoint, $array);
 	}
 	
@@ -613,13 +613,13 @@ class HaloApi {
 			throw new Exception("Missing 'id' parameter.");
 			return false;
 		}
-		$endpoint = $this->host . '/Quotation/'.$array['id'];
+		$endpoint = $this->host . '/api/Quotation/'.$array['id'];
         unset($array['id']);
 		return $this->exec('GET',$endpoint, $array);
 	}
 	
 	public function postQuote($array = array()) {
-		$endpoint = $this->host . '/Quotation';
+		$endpoint = $this->host . '/api/Quotation';
 		return $this->exec('POST',$endpoint, $array);
 	}
 	
@@ -628,7 +628,7 @@ class HaloApi {
 			throw new Exception("Missing 'id' parameter.");
 			return false;
 		}
-		$endpoint = $this->host . '/Quotation/'.$array['id'];
+		$endpoint = $this->host . '/api/Quotation/'.$array['id'];
         unset($array['id']);
 		return $this->exec('DELETE',$endpoint, $array);
 	}
@@ -638,7 +638,7 @@ class HaloApi {
 	//////////////////////////////////////////////////////////////////////////////////////
 	
 	public function getReports($array = array()) {
-		$endpoint = $this->host . '/Report';
+		$endpoint = $this->host . '/api/Report';
         return $this->exec('GET',$endpoint, $array);
 	}
 	
@@ -647,13 +647,13 @@ class HaloApi {
 			throw new Exception("Missing 'id' parameter.");
 			return false;
 		}
-		$endpoint = $this->host . '/Report/'.$array['id'];
+		$endpoint = $this->host . '/api/Report/'.$array['id'];
         unset($array['id']);
 		return $this->exec('GET',$endpoint, $array);
 	}
 	
 	public function postReport($array = array()) {
-		$endpoint = $this->host . '/Report';
+		$endpoint = $this->host . '/api/Report';
 		return $this->exec('POST',$endpoint, $array);
 	}
 	
@@ -662,7 +662,7 @@ class HaloApi {
 			throw new Exception("Missing 'id' parameter.");
 			return false;
 		}
-		$endpoint = $this->host . '/Report/'.$array['id'];
+		$endpoint = $this->host . '/api/Report/'.$array['id'];
         unset($array['id']);
 		return $this->exec('DELETE',$endpoint, $array);
 	}
@@ -672,7 +672,7 @@ class HaloApi {
 	//////////////////////////////////////////////////////////////////////////////////////
 	
 	public function getSites($array = array()) {
-		$endpoint = $this->host . '/Site';
+		$endpoint = $this->host . '/api/Site';
         return $this->exec('GET',$endpoint, $array);
 	}
 	
@@ -681,13 +681,13 @@ class HaloApi {
 			throw new Exception("Missing 'id' parameter.");
 			return false;
 		}
-		$endpoint = $this->host . '/Site/'.$array['id'];
+		$endpoint = $this->host . '/api/Site/'.$array['id'];
         unset($array['id']);
 		return $this->exec('GET',$endpoint, $array);
 	}
 	
 	public function postSite($array = array()) {
-		$endpoint = $this->host . '/Site';
+		$endpoint = $this->host . '/api/Site';
 		return $this->exec('POST',$endpoint, $array);
 	}
 	
@@ -696,7 +696,7 @@ class HaloApi {
 			throw new Exception("Missing 'id' parameter.");
 			return false;
 		}
-		$endpoint = $this->host . '/Site/'.$array['id'];
+		$endpoint = $this->host . '/api/Site/'.$array['id'];
         unset($array['id']);
 		return $this->exec('DELETE',$endpoint, $array);
 	}
@@ -706,7 +706,7 @@ class HaloApi {
 	//////////////////////////////////////////////////////////////////////////////////////
 	
 	public function getStatuses($array = array()) {
-		$endpoint = $this->host . '/Status';
+		$endpoint = $this->host . '/api/Status';
         return $this->exec('GET',$endpoint, $array);
 	}
 	
@@ -715,13 +715,13 @@ class HaloApi {
 			throw new Exception("Missing 'id' parameter.");
 			return false;
 		}
-		$endpoint = $this->host . '/Status/'.$array['id'];
+		$endpoint = $this->host . '/api/Status/'.$array['id'];
         unset($array['id']);
 		return $this->exec('GET',$endpoint, $array);
 	}
 	
 	public function postStatus($array = array()) {
-		$endpoint = $this->host . '/Status';
+		$endpoint = $this->host . '/api/Status';
 		return $this->exec('POST',$endpoint, $array);
 	}
 	
@@ -730,7 +730,7 @@ class HaloApi {
 			throw new Exception("Missing 'id' parameter.");
 			return false;
 		}
-		$endpoint = $this->host . '/Status/'.$array['id'];
+		$endpoint = $this->host . '/api/Status/'.$array['id'];
         unset($array['id']);
 		return $this->exec('DELETE',$endpoint, $array);
 	}
@@ -740,7 +740,7 @@ class HaloApi {
 	//////////////////////////////////////////////////////////////////////////////////////
 	
 	public function getSuppliers($array = array()) {
-		$endpoint = $this->host . '/Supplier';
+		$endpoint = $this->host . '/api/Supplier';
         return $this->exec('GET',$endpoint, $array);
 	}
 	
@@ -749,13 +749,13 @@ class HaloApi {
 			throw new Exception("Missing 'id' parameter.");
 			return false;
 		}
-		$endpoint = $this->host . '/Supplier/'.$array['id'];
+		$endpoint = $this->host . '/api/Supplier/'.$array['id'];
         unset($array['id']);
 		return $this->exec('GET',$endpoint, $array);
 	}
 	
 	public function postSupplier($array = array()) {
-		$endpoint = $this->host . '/Supplier';
+		$endpoint = $this->host . '/api/Supplier';
 		return $this->exec('POST',$endpoint, $array);
 	}
 	
@@ -764,7 +764,7 @@ class HaloApi {
 			throw new Exception("Missing 'id' parameter.");
 			return false;
 		}
-		$endpoint = $this->host . '/Supplier/'.$array['id'];
+		$endpoint = $this->host . '/api/Supplier/'.$array['id'];
         unset($array['id']);
 		return $this->exec('DELETE',$endpoint, $array);
 	}
@@ -774,7 +774,7 @@ class HaloApi {
 	//////////////////////////////////////////////////////////////////////////////////////
 	
 	public function getTeams($array = array()) {
-		$endpoint = $this->host . '/Team';
+		$endpoint = $this->host . '/api/Team';
         return $this->exec('GET',$endpoint, $array);
 	}
 	
@@ -783,13 +783,13 @@ class HaloApi {
 			throw new Exception("Missing 'id' parameter.");
 			return false;
 		}
-		$endpoint = $this->host . '/Team/'.$array['id'];
+		$endpoint = $this->host . '/api/Team/'.$array['id'];
         unset($array['id']);
 		return $this->exec('GET',$endpoint, $array);
 	}
 	
 	public function postTeam($array = array()) {
-		$endpoint = $this->host . '/Team';
+		$endpoint = $this->host . '/api/Team';
 		return $this->exec('POST',$endpoint, $array);
 	}
 	
@@ -798,7 +798,7 @@ class HaloApi {
 			throw new Exception("Missing 'id' parameter.");
 			return false;
 		}
-		$endpoint = $this->host . '/Team/'.$array['id'];
+		$endpoint = $this->host . '/api/Team/'.$array['id'];
         unset($array['id']);
 		return $this->exec('DELETE',$endpoint, $array);
 	}
@@ -808,7 +808,7 @@ class HaloApi {
 	//////////////////////////////////////////////////////////////////////////////////////
 	
 	public function getTicketTypes($array = array()) {
-		$endpoint = $this->host . '/TicketType';
+		$endpoint = $this->host . '/api/TicketType';
         return $this->exec('GET',$endpoint, $array);
 	}
 	
@@ -817,13 +817,13 @@ class HaloApi {
 			throw new Exception("Missing 'id' parameter.");
 			return false;
 		}
-		$endpoint = $this->host . '/TicketType/'.$array['id'];
+		$endpoint = $this->host . '/api/TicketType/'.$array['id'];
         unset($array['id']);
 		return $this->exec('GET',$endpoint, $array);
 	}
 	
 	public function postTicketType($array = array()) {
-		$endpoint = $this->host . '/TicketType';
+		$endpoint = $this->host . '/api/TicketType';
 		return $this->exec('POST',$endpoint, $array);
 	}
 	
@@ -832,7 +832,7 @@ class HaloApi {
 			throw new Exception("Missing 'id' parameter.");
 			return false;
 		}
-		$endpoint = $this->host . '/TicketType/'.$array['id'];
+		$endpoint = $this->host . '/api/TicketType/'.$array['id'];
         unset($array['id']);
 		return $this->exec('DELETE',$endpoint, $array);
 	}
@@ -876,7 +876,7 @@ class HaloApi {
 	//////////////////////////////////////////////////////////////////////////////////////
 	
 	public function getUsers($array = array()) {
-		$endpoint = $this->host . '/Users';
+		$endpoint = $this->host . '/api/Users';
         return $this->exec('GET',$endpoint, $array);
 	}
 	
@@ -885,13 +885,13 @@ class HaloApi {
 			throw new Exception("Missing 'id' parameter.");
 			return false;
 		}
-		$endpoint = $this->host . '/Users/'.$array['id'];
+		$endpoint = $this->host . '/api/Users/'.$array['id'];
         unset($array['id']);
 		return $this->exec('GET',$endpoint, $array);
 	}
 	
 	public function postUser($array = array()) {
-		$endpoint = $this->host . '/Users';
+		$endpoint = $this->host . '/api/Users';
 		return $this->exec('POST',$endpoint, $array);
 	}
 	
@@ -900,7 +900,7 @@ class HaloApi {
 			throw new Exception("Missing 'id' parameter.");
 			return false;
 		}
-		$endpoint = $this->host . '/Users/'.$array['id'];
+		$endpoint = $this->host . '/api/Users/'.$array['id'];
         unset($array['id']);
 		return $this->exec('DELETE',$endpoint, $array);
 	}
