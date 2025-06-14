@@ -1,18 +1,18 @@
-<a  name="readme-top"></a>
+<a name="readme-top"></a>
 
 <p align="center">
-    <a href="https://github.com/derricksmith/HaloApi/contributors" alt="Contributors">
-        <img src="https://img.shields.io/github/contributors/derricksmith/HaloApi.svg?style=for-the-badge" /></a>
-    <a href="https://github.com/derricksmith/HaloApi/network/members" alt="Forks">
-        <img src="https://img.shields.io/github/forks/derricksmith/HaloApi.svg?style=for-the-badge" /></a>
-    <a href="https://github.com/derricksmith/HaloApi/stargazers" alt="Stars">
-        <img src="https://img.shields.io/github/stars/derricksmith/HaloApi.svg?style=for-the-badge" /></a>
-    <a href="https://github.com/derricksmith/HaloApi/issues" alt="Issues">
-        <img src="https://img.shields.io/github/issues/derricksmith/HaloApi.svg?style=for-the-badge" /></a>
-    <a href="https://github.com/derricksmith/HaloApi/blob/master/LICENSE.txt" alt="License">
-        <img src="https://img.shields.io/github/license/derricksmith/HaloApi.svg?style=for-the-badge" /></a>
+    <a href="https://github.com/derricksmith/HaloApi/contributors">
+        <img src="https://img.shields.io/github/contributors/derricksmith/HaloApi.svg?style=for-the-badge" alt="Contributors" /></a>
+    <a href="https://github.com/derricksmith/HaloApi/network/members">
+        <img src="https://img.shields.io/github/forks/derricksmith/HaloApi.svg?style=for-the-badge" alt="Forks" /></a>
+    <a href="https://github.com/derricksmith/HaloApi/stargazers">
+        <img src="https://img.shields.io/github/stars/derricksmith/HaloApi.svg?style=for-the-badge" alt="Stars" /></a>
+    <a href="https://github.com/derricksmith/HaloApi/issues">
+        <img src="https://img.shields.io/github/issues/derricksmith/HaloApi.svg?style=for-the-badge" alt="Issues" /></a>
+    <a href="https://github.com/derricksmith/HaloApi/blob/master/LICENSE.txt">
+        <img src="https://img.shields.io/github/license/derricksmith/HaloApi.svg?style=for-the-badge" alt="License" /></a>
     <a href="https://www.linkedin.com/in/derrick-smith-cissp-cism-9b355b56/">
-        <img src="https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555" /></a>
+        <img src="https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555" alt="LinkedIn"/></a>
 </p>
 
 <p align="center">
@@ -22,9 +22,9 @@
 </p>
 
 
-<div  align="center">
+<div align="center">
 
-<h3  align="center">HaloAPI</h3>
+<h3 align="center">HaloAPI</h3>
   
 HaloApi is a PHP Wrapper for the HaloITSM API.  This class supports all endpoints and methods available in the API.  
 
@@ -53,30 +53,25 @@ HaloITSM is a powerful ITIL aligned IT Service Management tool.  The REST API pr
 
   
 
-The PHP curl extension is required.
+The following PHP extensions are required:
 
-* php curl
+* curl
+* json
 
 
 <!-- USAGE EXAMPLES -->
 
 ## Usage
 
-Install with Composer
+### Install with Composer
 
 ```
 composer require derricksmith/haloapi:dev-main
 ```
 
------- OR ------
+### Vanilla PHP
 
-Include the class in your project.  
-
-```
-require HaloApi.class.php
-```
-
-Then instantiate the class with the following parameters.  See the [HaloITSM API documentation](https://halo.haloservicedesk.com/apidoc/info) for more information. 
+Instantiate the class with the following parameters.  See the [HaloITSM API documentation](https://halo.haloservicedesk.com/apidoc/info) for more information. 
 
 client_id
 client_secret
@@ -86,20 +81,20 @@ host
 verifypeer
 
 ```
-$halo = new HaloApi(array(
+$halo = new HaloApi([
 	'client_id' => '<your client id>', 
 	'client_secret' => '<your client secret>', 
 	'grant_type' => '<your grant type>',
 	'scope' => '<your scope>',
 	'host' => '<your Halo ITSM base URL>', 
 	'verifypeer' => true
-));	
+]);	
 ```
 
 Then call an endpoint method in the class.
 ```
-$request = array(
-	'pageinate' => true,
+$tickets = $halo->getTickets([
+    'pageinate' => true,
 	'page_size' => 50,
 	'page_no' => 1,
 	'columns_id' => 1,
@@ -107,11 +102,74 @@ $request = array(
 	'ticketlinktype' => null,
 	'searchactions' => null,
 	'order' => 'id',
-);
-$tickets = $halo->getTickets($request);
+]);
+
+// Returns array with response headers and data
+[
+    "status": 200,
+    "header": ""
+      HTTP/2 200
+      date: Thu, 01 Jan 1970 00:00:00 GMT
+      content-type: application/json; charset=utf-8
+      content-length: 56
+      cache-control: no-cache, no-store, must-revalidate
+      server: 
+      request-context: appId=cid-v1:aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa
+      strict-transport-security: max-age=31536000; IncludeSubDomains; preload
+      referrer-policy: same-origin
+      permissions-policy: camera=(self),geolocation=(self)
+      "",
+    "data": {
+       "record_count": 0,
+       "tickets": [],
+       "include_children": false,
+    },
+  ]
 ```
 
-  
+<p  align="right">(<a  href="#readme-top">back to top</a>)</p>
+
+### Laravel
+
+The package contains an optional Laravel-specific service provider, config file & facade.
+
+Once the package is installed, add the following variables to your .env file:
+
+```dotenv
+HALO_CLIENT_ID=
+HALO_CLIENT_SECRET=
+HALO_HOST=https://your-subdomain.haloitsm.com
+```
+
+Optionally, you can publish the config file:
+
+```bash
+php artisan vendor:publish --tag="halo-config"
+```
+
+You may then use the facade to interact with Halo:
+
+```php
+use DerrickSmith\HaloApi\Facades\HaloApi;
+
+$tickets = HaloApi::getTickets([
+    'pageinate' => true,
+    'page_size' => 50,
+    'page_no' => 1,
+    'columns_id' => 1,
+    'includecolumns' => false,
+    'ticketlinktype' => null,
+    'searchactions' => null,
+    'order' => 'id',
+]);
+
+// Returns data object
+{
+    "record_count": 0,
+    "tickets": [],
+    "include_children": false,
+}
+```
 
 <p  align="right">(<a  href="#readme-top">back to top</a>)</p>
 

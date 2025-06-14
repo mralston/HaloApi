@@ -5,7 +5,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Derricksmith\\Haloapi\\": "src/"
+            "DerrickSmith\\HaloApi\\": "src/"
         }
     },
     "support": {
@@ -18,5 +18,15 @@
             "name": "Derrick Smith"
         }
     ],
-    "require": {}
+    "require": {
+        "ext-curl": "*",
+        "ext-json": "*"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DerrickSmith\\HaloApi\\Providers\\HaloServiceProvider"
+            ]
+        }
+    }
 }
