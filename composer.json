@@ -1,5 +1,5 @@
 {
-    "name": "derricksmith/haloapi",
+    "name": "mralston/haloapi",
     "description": "HaloApi is a PHP Wrapper for the HaloITSM API. This class supports all endpoints and methods available in the API.",
     "type": "library",
     "license": "MIT",
