@@ -66,7 +66,7 @@ The following PHP extensions are required:
 ### Install with Composer
 
 ```
-composer require derricksmith/haloapi:dev-main
+composer require mralston/haloapi
 ```
 
 ### Vanilla PHP

@@ -1,6 +1,6 @@
 {
     "name": "mralston/haloapi",
-    "description": "HaloApi is a PHP Wrapper for the HaloITSM API. This class supports all endpoints and methods available in the API.",
+    "description": "Fork of derricksmith/haloapi. HaloApi is a PHP Wrapper for the HaloITSM API. This class supports all endpoints and methods available in the API.",
     "type": "library",
     "license": "MIT",
     "autoload": {
@@ -9,13 +9,18 @@
         }
     },
     "support": {
-        "issues": "https://github.com/derricksmith/haloapi/issues",
-        "source": "https://github.com/derricksmith/haloapi",
-        "email": "derricksmith01@msn.com"
+        "issues": "https://github.com/mralston/haloapi/issues",
+        "source": "https://github.com/mralston/haloapi",
+        "email": "matt@mralston.co.uk"
     },
     "authors": [
         {
             "name": "Derrick Smith"
+        },
+        {
+            "name": "Matt Ralston",
+            "email": "matt@mralston.co.uk",
+            "role": "Developer"
         }
     ],
     "require": {
